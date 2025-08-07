@@ -1,3 +1,7 @@
 rootProject.name = "backend"
 
-include("codedrill-common", "codedrill-domain", "codedrill-infra", "codedrill-api")
+include("codedrill-common")
+include("codedrill-domain")
+include("codedrill-infra")
+include("codedrill-api")
+include("codedrill-backoffice")
