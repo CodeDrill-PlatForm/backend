@@ -9,16 +9,19 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 
-    /* Jackson DataType */
+    // Jackson DataType
     implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.18.0'
 
-    /* MySQL */
-    implementation group: 'com.mysql', name: 'mysql-connector-j', version: '8.3.0'
+    // H2 Database
+    runtimeOnly 'com.h2database:h2'
 
-    /* JPA */
+    // PostgreSQL
+    runtimeOnly group: 'org.postgresql', name: 'postgresql', version: '42.7.3'
+
+    // JPA
     api group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '3.2.3'
 
-    /* QueryDsl */
+    // QueryDsl
     api 'com.querydsl:querydsl-core:5.0.0'
     api 'com.querydsl:querydsl-jpa:5.0.0:jakarta'
     api 'com.querydsl:querydsl-sql:5.0.0'
@@ -27,14 +30,13 @@ dependencies {
     annotationProcessor "jakarta.persistence:jakarta.persistence-api:3.1.0"
 
     /* Redis */
-    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
-    testImplementation "org.testcontainers:junit-jupiter:1.19.7"
-    testImplementation "org.testcontainers:testcontainers:1.19.7"
-    testImplementation "org.testcontainers:mysql:1.19.7"
-    testImplementation "com.redis.testcontainers:testcontainers-redis-junit:1.6.4"
+//    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+//    testImplementation "org.testcontainers:junit-jupiter:1.19.7"
+//    testImplementation "org.testcontainers:testcontainers:1.19.7"
+//    testImplementation "com.redis.testcontainers:testcontainers-redis-junit:1.6.4"
 
     /* Redission */
-    implementation 'org.redisson:redisson-spring-boot-starter:3.30.0'
+//    implementation 'org.redisson:redisson-spring-boot-starter:3.30.0'
 }
 
 def querydslDir = 'src/main/generated'
