@@ -4,6 +4,11 @@ jar { enabled = true }
 dependencies {
     implementation(project(":codedrill-common"))
 
+    // Lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+
     /* Jackson DataType */
     implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.18.0'
 
